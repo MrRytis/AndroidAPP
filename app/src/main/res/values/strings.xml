@@ -6,4 +6,10 @@
     <string name="home">Home button</string>
     <string name="recent">Recent button</string>
     <string name="back">Back button</string>
+    <string name="homesettings">homeSettings</string>
+    <string name="recentsettings">recentSettings</string>
+    <string name="backsettings">backSettings</string>
+    <string name="long_press_action">Long press action</string>
+    <string name="noneAction">No action</string>
+    <string name="double_tap_action">Double tap action</string>
 </resources>
