@@ -12,4 +12,9 @@
     <string name="long_press_action">Long press action</string>
     <string name="noneAction">No action</string>
     <string name="double_tap_action">Double tap action</string>
+    <string name="available_icons">Available icons</string>
+    <string name="homeicon1">homeIcon1</string>
+    <string name="backicon1">backIcon1</string>
+    <string name="backicon2">backIcon2</string>
+    <string name="recenticon1">recentIcon1</string>
 </resources>

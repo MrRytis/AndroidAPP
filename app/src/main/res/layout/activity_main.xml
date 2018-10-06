@@ -15,11 +15,9 @@
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="16dp"
         android:checked="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toEndOf="@+id/SwapText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -94,39 +92,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <ImageView
-        android:id="@+id/homeSettings"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/homesettings"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:srcCompat="@drawable/baseline_settings_white_48" />
-
-    <ImageView
-        android:id="@+id/recentSettings"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="152dp"
-        android:contentDescription="@string/recentsettings"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/homeSettings"
-        app:srcCompat="@drawable/baseline_settings_white_48" />
-
-    <ImageView
-        android:id="@+id/backSettings"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="150dp"
-        android:contentDescription="@string/backsettings"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/recentSettings"
-        app:srcCompat="@drawable/baseline_settings_white_48" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="346dp"
@@ -194,7 +159,7 @@
         android:layout_width="346dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="11dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:text="@string/long_press_action"
@@ -256,7 +221,7 @@
         android:layout_width="346dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="11dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:text="@string/long_press_action"
@@ -313,5 +278,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/homesettings"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:srcCompat="@drawable/baseline_settings_white_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/recentsettings"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:srcCompat="@drawable/baseline_settings_white_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/backsettings"
+        android:elevation="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@drawable/baseline_settings_white_24" />
 
 </android.support.constraint.ConstraintLayout>

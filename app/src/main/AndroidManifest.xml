@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +19,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ButtonSetupActivity"
-            android:label="CustomNavigationButton">
-
+            android:name=".HomeButtonSettingsActivity"
+            android:label="Home button settings">
+        </activity>
+        <activity
+            android:name=".RecentButtonSettingActivity"
+            android:label="Recent button settings">
+        </activity>
+        <activity
+            android:name=".BackButtonSettingsActivity"
+            android:label="Back button settings">
+        </activity>
+        <activity
+            android:name=".HomeLongPressActivity"
+            android:label="Long press options">
+        </activity>
+        <activity
+            android:name=".HomeDoublePressActivity"
+            android:label="Double press options">
+        </activity>
+        <activity
+            android:name=".RecentLongPressActivity"
+            android:label="Long press options">
+        </activity>
+        <activity
+            android:name=".RecentDoublePressActivity"
+            android:label="Double press options">
+        </activity>
+        <activity
+            android:name=".BackLongPressActivity"
+            android:label="Long press options">
+        </activity>
+        <activity
+            android:name=".BackDoublePressActivity"
+            android:label="Double press options">
         </activity>
     </application>
 
