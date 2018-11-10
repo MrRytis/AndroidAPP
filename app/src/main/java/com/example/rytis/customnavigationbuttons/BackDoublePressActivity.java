@@ -1,13 +1,14 @@
 package com.example.rytis.customnavigationbuttons;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
-public class BackDoublePressActivity extends AppCompatActivity {
+import android.app.ListActivity;
+import android.os.Bundle;
+
+
+public class BackDoublePressActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.back_double_press);
     }
 }
