@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rytis.customnavigationbuttons">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+
+    <uses-sdk android:maxSdkVersion="19" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -54,6 +59,16 @@
             android:name=".BackDoublePressActivity"
             android:label="Double press options">
         </activity>
+        <service android:name=".BackButtonService">
+        </service>
+        <service android:name=".HomeButtonService">
+        </service>
+        <service android:name=".RecentButtonService">
+        </service>
+        <service android:name=".BackAction" />
+        <service android:name=".HomeAction" />
+        <service android:name=".RecentAction" />
+
     </application>
 
 </manifest>
