@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">CustomNavigationButtons</string>
-    <string name="setup">Setup</string>
+    <string name="settings">Settings</string>
+    <string name="swap_buttons">Swap buttons</string>
+    <string name="swap_the_order_of_recents_and_back_button">Swap the order of recents and back button</string>
+    <string name="home">Home button</string>
+    <string name="recent">Recent button</string>
+    <string name="back">Back button</string>
+    <string name="homesettings">homeSettings</string>
+    <string name="recentsettings">recentSettings</string>
+    <string name="backsettings">backSettings</string>
+    <string name="long_press_action">Long press action</string>
+    <string name="noneAction">No action</string>
+    <string name="double_tap_action">Double tap action</string>
+    <string name="available_icons">Available icons</string>
+    <string name="homeicon1">homeIcon1</string>
+    <string name="backicon1">backIcon1</string>
+    <string name="backicon2">backIcon2</string>
+    <string name="recenticon1">recentIcon1</string>
 </resources>
