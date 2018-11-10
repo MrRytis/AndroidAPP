@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         homeSettingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HomeButtonSettingsActivity.class));
+                startService(new Intent(getApplication(), BackButtonService.class));
+                startService(new Intent(getApplication(), HomeButtonService.class));
+                startService(new Intent(getApplication(), RecentButtonService.class));
+                //startActivity(new Intent(MainActivity.this, HomeButtonSettingsActivity.class));
             }
         });
 
@@ -26,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
         recentSettingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RecentButtonSettingActivity.class));
+                stopService(new Intent(getApplication(), BackButtonService.class));
+                stopService(new Intent(getApplication(), HomeButtonService.class));
+                stopService(new Intent(getApplication(), RecentButtonService.class));
+                //startActivity(new Intent(MainActivity.this, RecentButtonSettingActivity.class));
             }
         });
 
