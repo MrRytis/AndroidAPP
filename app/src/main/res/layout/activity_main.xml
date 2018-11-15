@@ -10,16 +10,39 @@
 
 
     <Switch
+        android:id="@+id/switch2"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="245dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/turn_on"
+        android:textColor="@color/colorText"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SwapText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
         android:id="@+id/switch1"
         android:layout_width="72dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="8dp"
         android:checked="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/SwapText"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2"
         app:layout_constraintVertical_bias="0.0"
         tools:checked="false" />
 
@@ -36,7 +59,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <TextView
         android:id="@+id/textView2"

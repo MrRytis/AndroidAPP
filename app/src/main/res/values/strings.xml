@@ -17,4 +17,5 @@
     <string name="backicon1">backIcon1</string>
     <string name="backicon2">backIcon2</string>
     <string name="recenticon1">recentIcon1</string>
+    <string name="turn_on">Turn on/off</string>
 </resources>

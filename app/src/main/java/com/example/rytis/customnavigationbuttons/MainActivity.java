@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,14 +16,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //requestPermissions(new String[]{Manifest.permission.BIND_ACCESSIBILITY_SERVICE}, Integer.parseInt(ACCESSIBILITY_SERVICE));
+
+        Switch turnOnSwitch = findViewById(R.id.switch2);
+        turnOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b)
+                {
+                    startService(new Intent(getApplication(), MainButtonService.class));
+                }
+                else
+                {
+                    stopService(new Intent(getApplication(), MainButtonService.class));
+                }
+            }
+        });
+
         ImageButton homeSettingsButton = findViewById(R.id.imageButton2);
         homeSettingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startService(new Intent(getApplication(), BackButtonService.class));
-                startService(new Intent(getApplication(), HomeButtonService.class));
-                startService(new Intent(getApplication(), RecentButtonService.class));
-                //startActivity(new Intent(MainActivity.this, HomeButtonSettingsActivity.class));
+
+                startActivity(new Intent(MainActivity.this, HomeButtonSettingsActivity.class));
             }
         });
 
@@ -29,10 +46,8 @@ public class MainActivity extends AppCompatActivity {
         recentSettingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopService(new Intent(getApplication(), BackButtonService.class));
-                stopService(new Intent(getApplication(), HomeButtonService.class));
-                stopService(new Intent(getApplication(), RecentButtonService.class));
-                //startActivity(new Intent(MainActivity.this, RecentButtonSettingActivity.class));
+
+                startActivity(new Intent(MainActivity.this, RecentButtonSettingActivity.class));
             }
         });
 
