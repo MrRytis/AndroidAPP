@@ -3,7 +3,6 @@
     package="com.example.rytis.customnavigationbuttons">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
 
     <uses-sdk android:maxSdkVersion="19" />
 
@@ -59,15 +58,15 @@
             android:name=".BackDoublePressActivity"
             android:label="Double press options">
         </activity>
-        <service android:name=".BackButtonService">
+
+        <service android:name=".MainButtonService">
         </service>
-        <service android:name=".HomeButtonService">
+        <service android:name=".OptionsService">
         </service>
-        <service android:name=".RecentButtonService">
-        </service>
-        <service android:name=".BackAction" />
-        <service android:name=".HomeAction" />
-        <service android:name=".RecentAction" />
+        <service android:name=".TopOptionService" />
+        <service android:name=".LeftOptionService" />
+        <service android:name=".RightOptionService" />
+        <service android:name=".BottomOptionService" />
 
     </application>
 
