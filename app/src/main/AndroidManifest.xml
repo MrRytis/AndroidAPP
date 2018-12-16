@@ -23,40 +23,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeButtonSettingsActivity"
+            android:name=".LeftButtonSettingsActivity"
             android:label="Home button settings">
         </activity>
         <activity
-            android:name=".RecentButtonSettingActivity"
+            android:name=".RightButtonSettingActivity"
             android:label="Recent button settings">
         </activity>
         <activity
-            android:name=".BackButtonSettingsActivity"
+            android:name=".TopButtonSettingsActivity"
             android:label="Back button settings">
-        </activity>
-        <activity
-            android:name=".HomeLongPressActivity"
-            android:label="Long press options">
-        </activity>
-        <activity
-            android:name=".HomeDoublePressActivity"
-            android:label="Double press options">
-        </activity>
-        <activity
-            android:name=".RecentLongPressActivity"
-            android:label="Long press options">
-        </activity>
-        <activity
-            android:name=".RecentDoublePressActivity"
-            android:label="Double press options">
-        </activity>
-        <activity
-            android:name=".BackLongPressActivity"
-            android:label="Long press options">
-        </activity>
-        <activity
-            android:name=".BackDoublePressActivity"
-            android:label="Double press options">
         </activity>
 
         <service android:name=".MainButtonService">

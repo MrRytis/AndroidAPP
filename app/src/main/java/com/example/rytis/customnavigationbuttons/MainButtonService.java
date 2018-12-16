@@ -33,8 +33,8 @@ public class MainButtonService extends Service {
                 PixelFormat.TRANSLUCENT);
 
         params.gravity = Gravity.TOP | Gravity.LEFT;
-        params.x = 0;
-        params.y = 100;
+        params.x = windowManager.getDefaultDisplay().getWidth() - 100;
+        params.y = windowManager.getDefaultDisplay().getHeight() - 300;
 
         //this code is for dragging the chat head
         mainButton.setOnTouchListener(new View.OnTouchListener() {

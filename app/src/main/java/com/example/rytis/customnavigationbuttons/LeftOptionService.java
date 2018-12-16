@@ -3,6 +3,7 @@ package com.example.rytis.customnavigationbuttons;
 import android.app.Service;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.os.IBinder;
@@ -12,23 +13,63 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class LeftOptionService extends Service {
 
     private WindowManager windowManager;
     private ImageView leftButton;
     WindowManager.LayoutParams params;
+    private String packName = null;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        FileInputStream fis = null;
 
+        try {
+            fis = openFileInput("LeftSettings.txt");
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader br = new BufferedReader(isr);
+            StringBuilder sb = new StringBuilder();
+            String text;
+
+            while ((text = br.readLine()) != null) {
+                sb.append(text);
+            }
+
+            packName = sb.toString();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
         leftButton = new ImageView(this);
 
         Drawable appIcon = null;
         try {
-            appIcon = getPackageManager().getApplicationIcon("com.instagram.android");
+            if (packName == null)
+            {
+                appIcon = getPackageManager().getApplicationIcon("com.android.chrome");
+            }
+            else {
+                appIcon = getPackageManager().getApplicationIcon(packName);
+            }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -52,7 +93,13 @@ public class LeftOptionService extends Service {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.instagram.android");
+                        Intent launchIntent = null;
+                        if(packName == null)
+                        {
+                            launchIntent = getPackageManager().getLaunchIntentForPackage("com.android.chrome");
+                        } else {
+                            launchIntent = getPackageManager().getLaunchIntentForPackage(packName);
+                        }
                         if(launchIntent != null)
                         {
                             startActivity(launchIntent);

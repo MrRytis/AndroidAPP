@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,94 +16,36 @@ public class MainActivity extends AppCompatActivity {
 
         //requestPermissions(new String[]{Manifest.permission.BIND_ACCESSIBILITY_SERVICE}, Integer.parseInt(ACCESSIBILITY_SERVICE));
 
-        Switch turnOnSwitch = findViewById(R.id.switch2);
-        turnOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b)
-                {
-                    startService(new Intent(getApplication(), MainButtonService.class));
-                }
-                else
-                {
-                    stopService(new Intent(getApplication(), MainButtonService.class));
-                }
-            }
-        });
-
-        ImageButton homeSettingsButton = findViewById(R.id.imageButton2);
-        homeSettingsButton.setOnClickListener(new View.OnClickListener() {
+        Button turnOn = findViewById(R.id.turnOn);
+        turnOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                startActivity(new Intent(MainActivity.this, HomeButtonSettingsActivity.class));
+                startService(new Intent(getApplication(), MainButtonService.class));
             }
         });
 
-        ImageButton recentSettingButton = findViewById(R.id.imageButton3);
-        recentSettingButton.setOnClickListener(new View.OnClickListener() {
+        Button topButtonSetup = findViewById(R.id.topButton);
+        topButtonSetup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                startActivity(new Intent(MainActivity.this, RecentButtonSettingActivity.class));
+                startActivity(new Intent(MainActivity.this, TopButtonSettingsActivity.class));
             }
         });
 
-        ImageButton backSettingButton = findViewById(R.id.imageButton4);
-        backSettingButton.setOnClickListener(new View.OnClickListener() {
+        Button leftButtonSetup = findViewById(R.id.leftButton);
+        leftButtonSetup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BackButtonSettingsActivity.class));
+                startActivity(new Intent(MainActivity.this, LeftButtonSettingsActivity.class));
             }
         });
 
-        Button homeLongPressButton = findViewById(R.id.button);
-        homeLongPressButton.setOnClickListener(new View.OnClickListener() {
+        Button rightButtonSetup = findViewById(R.id.rightButton);
+        rightButtonSetup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HomeLongPressActivity.class));
+                startActivity(new Intent(MainActivity.this, RightButtonSettingActivity.class));
             }
         });
-
-        Button homeDoublePressButton = findViewById(R.id.button2);
-        homeDoublePressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HomeDoublePressActivity.class));
-            }
-        });
-
-        Button recentLongPressButton = findViewById(R.id.button3);
-        recentLongPressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RecentLongPressActivity.class));
-            }
-        });
-
-        Button recentDoublePressButton = findViewById(R.id.button4);
-        recentDoublePressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RecentDoublePressActivity.class));
-            }
-        });
-
-        Button backLongPressButton = findViewById(R.id.button5);
-        backLongPressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BackLongPressActivity.class));
-            }
-        });
-
-        Button backDoublePressButton = findViewById(R.id.button7);
-        backDoublePressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BackDoublePressActivity.class));
-            }
-        });
-
     }
 }
